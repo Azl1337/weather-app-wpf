@@ -40,13 +40,13 @@
         </Grid>
 
         <!-- Общая информация -->
-        <Label x:Name="LInfo" Content="Здесь представлена информация о погоде в городах" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="labelInfo" Content="Здесь представлена информация о погоде в городах" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         <!-- Строка температуры -->
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Температура:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Label x:Name="LTemp" Content="" Margin="2 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label x:Name="labelTemp" Content="" Margin="2 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Grid>
 
@@ -54,7 +54,7 @@
         <Grid Grid.Row="3">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Описание погоды:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Label x:Name="LDescription" Content="" Margin="2 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label x:Name="labelDescription" Content="" Margin="2 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Grid>
 
@@ -66,7 +66,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
                 <Label Content="Скорость ветра:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Label x:Name="LWindSpeed" Content="" Margin="2 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label x:Name="labelWindSpeed" Content="" Margin="2 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Grid>
 
