@@ -69,7 +69,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="app\connection\Connection.cs" />
+    <Compile Include="app\connections\Connection.cs" />
+    <Compile Include="app\diraction\IShowInfo.cs" />
+    <Compile Include="app\models\Description.cs" />
+    <Compile Include="app\models\Temperature.cs" />
+    <Compile Include="app\models\WeatherResponse.cs" />
+    <Compile Include="app\models\Wind.cs" />
+    <Compile Include="app\views\ShowInfo.cs" />
     <Compile Include="app\WeatherClient.xaml.cs">
       <DependentUpon>WeatherClient.xaml</DependentUpon>
       <SubType>Code</SubType>

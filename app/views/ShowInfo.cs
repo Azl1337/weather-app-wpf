@@ -10,7 +10,7 @@ using WeatherApplication.app.diraction;
 
 namespace WeatherApplication.app.views
 {
-    internal class ShowInfo : IShowInfo
+    public class ShowInfo 
     {
         private readonly Label _labelInfo;
         private readonly Label _labelTemp;
@@ -24,12 +24,12 @@ namespace WeatherApplication.app.views
             _labelWindSpeed = labelWindSpeed;
         }
 
-        public void UpdateInfo(string location, float temp, string[] description, float speed)
+        public static void UpdateInfo(ShowInfo si,string location, float temp, string description, float speed)
         {
-            _labelInfo.Content = $"Информация о погоде в {location}";
-            _labelTemp.Content = temp + " °C";
-            _labelDescription.Content = description;
-            _labelWindSpeed.Content = speed + " м/с";
+            si._labelInfo.Content = $"Информация о погоде в {location}";
+            si._labelTemp.Content = temp + " °C";
+            si._labelDescription.Content = description;
+            si._labelWindSpeed.Content = speed + " м/с";
 
             //_labelInfo.Content = $"Информация о погоде в {location}";
             //_labelTemp.Content = weatherResponse.main.temp + " °C";

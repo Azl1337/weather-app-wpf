@@ -24,6 +24,10 @@ namespace WeatherApplication
     public partial class WeatherClient : Window
     {
         private readonly ShowInfo showInfo;
+        private string key;
+        private string location;
+        private static string answer;
+
         public WeatherClient()
         {
             InitializeComponent();
@@ -32,10 +36,6 @@ namespace WeatherApplication
                 labelDescription, 
                 labelWindSpeed);
         }
-
-        private string key;
-        private string location;
-        private static string answer;
 
         private void BSearchClick(object sender, RoutedEventArgs e)
         {
@@ -58,41 +58,12 @@ namespace WeatherApplication
 
             try
             {
-                Connection.ConnectAsync(location, key).Wait();
+                Connection.ConnectAsync(location, key, showInfo).Wait();
             }
-            catch (Exception ex)
+            catch (Exception ex)//Add more exceptions
             {
                 error.AppendLine(Convert.ToString(ex));
             }
-        }
-
-        //Данные классы реализованы как способ обращения к запросам самого API
-        public class WeatherResponse
-        {
-            public TemperatureInfo main { get; set; }
-            public Description[] weather { get; set; }
-            public WindSpeedInfo wind { get; set; }
-
-        }
-
-        //Запрос main.temp - дает нам возможность получить данные о температуре
-        public class TemperatureInfo
-        {
-            public float temp { get; set; }
-            public float temp_min {  get; set; }
-            public float temp_max {  get; set; }
-        }
-
-        //Запрос weather[].description - дает нам возможность получить данные об описании погоды
-        public class Description
-        {
-            public string description;
-        }
-
-        //Запрос wind.speed - дает нам возможность получить данные о скорости ветра
-        public class WindSpeedInfo
-        {
-            public double speed { get; set; }
         }
 
     }
