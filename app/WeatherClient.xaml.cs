@@ -24,7 +24,7 @@ namespace WeatherApplication
     public partial class WeatherClient : Window
     {
         private readonly ShowInfo showInfo;
-        private string key;
+        private string key = "PUT_YOUR_TOKEN_HERE";
         private string location;
         private static string answer;
 
@@ -41,8 +41,8 @@ namespace WeatherApplication
         {
             StringBuilder error = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(TBoxAppKey.Text))
-                error.AppendLine("Ключ введен некорректно");
+            //if (string.IsNullOrWhiteSpace(TBoxAppKey.Text))
+            //    error.AppendLine("Ключ введен некорректно");
 
             if (string.IsNullOrWhiteSpace(TBoxLocation.Text))
                 error.AppendLine("Город введен некорректно");
@@ -53,7 +53,7 @@ namespace WeatherApplication
                 return;
             }
             
-            key = TBoxAppKey.Text;
+            //key = TBoxAppKey.Text;
             location = TBoxLocation.Text;
 
             try
