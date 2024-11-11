@@ -10,5 +10,7 @@ namespace WeatherApplication.app.models
     internal class Wind
     {
         public float speed;
+        public float deg;
+        public float gust;
     }
 }
