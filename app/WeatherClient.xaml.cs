@@ -24,7 +24,7 @@ namespace WeatherApplication
     public partial class WeatherClient : Window
     {
         private readonly ShowInfo showInfo;
-        private string key = "PUT_YOUR_TOKEN_HERE";
+        private string key = "";//PUT_YOUR_TOKEN_HERE
         private string location;
         private static string answer;
 

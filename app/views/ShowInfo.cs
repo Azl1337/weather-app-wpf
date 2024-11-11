@@ -30,11 +30,6 @@ namespace WeatherApplication.app.views
             si._labelTemp.Content = temp + " °C";
             si._labelDescription.Content = description;
             si._labelWindSpeed.Content = speed + " м/с";
-
-            //_labelInfo.Content = $"Информация о погоде в {location}";
-            //_labelTemp.Content = weatherResponse.main.temp + " °C";
-            //_labelDescription.Content = weatherResponse.weather[0].description;
-            //_labelWindSpeed.Content = weatherResponse.wind.speed + " м/с";
         }
     }
 }
