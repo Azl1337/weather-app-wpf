@@ -4,7 +4,6 @@ using System.Windows;
 using WeatherApplication.app.connections;
 using WeatherApplication.app.views;
 
-
 namespace WeatherApplication
 {
     public partial class WeatherClient : Window

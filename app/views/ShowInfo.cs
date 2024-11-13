@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static WeatherApplication.WeatherClient;
-using System.Windows.Shapes;
-using System.Windows.Controls;
-using WeatherApplication.app.diraction;
+﻿using System.Windows.Controls;
 
 namespace WeatherApplication.app.views
 {
