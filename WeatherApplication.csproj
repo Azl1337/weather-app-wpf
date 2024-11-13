@@ -108,7 +108,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="resources\weatherIcons\01d.png" />
+    <Resource Include="resources\weatherIcons\01n.png" />
+    <Resource Include="resources\weatherIcons\02d.png" />
+    <Resource Include="resources\weatherIcons\02n.png" />
+    <Resource Include="resources\weatherIcons\03d.png" />
+    <Resource Include="resources\weatherIcons\03n.png" />
+    <Resource Include="resources\weatherIcons\04d.png" />
+    <Resource Include="resources\weatherIcons\04n.png" />
+    <Resource Include="resources\weatherIcons\09d.png" />
+    <Resource Include="resources\weatherIcons\09n.png" />
+    <Resource Include="resources\weatherIcons\10d.png" />
+    <Resource Include="resources\weatherIcons\10n.png" />
+    <Resource Include="resources\weatherIcons\11d.png" />
+    <Resource Include="resources\weatherIcons\11n.png" />
+    <Resource Include="resources\weatherIcons\13d.png" />
+    <Resource Include="resources\weatherIcons\13n.png" />
+    <Resource Include="resources\weatherIcons\50d.png" />
+    <Resource Include="resources\weatherIcons\50n.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\ico\weatherapp.ico" />
   </ItemGroup>

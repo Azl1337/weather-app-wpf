@@ -6,5 +6,7 @@
         public string main;
         public string description;
         public string icon;
+
+        public string GetIcon() { return icon; }
     }
 }

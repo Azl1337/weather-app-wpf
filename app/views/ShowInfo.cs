@@ -1,8 +1,10 @@
-﻿using System.Windows.Controls;
+﻿using System.IO;
+using System.Windows.Controls;
+using WeatherApplication.app.diraction;
 
 namespace WeatherApplication.app.views
 {
-    public class ShowInfo 
+    public class ShowInfo : IShowInfo
     {
         private readonly Label _labelInfo;
         private readonly Label _labelTemp;
@@ -16,7 +18,7 @@ namespace WeatherApplication.app.views
             _labelWindSpeed = labelWindSpeed;
         }
 
-        public static void UpdateInfo(ShowInfo si,string location, float temp, string weather, float speed)
+        public void UpdateInfo(ShowInfo si,string location, float temp, string weather, float speed)
         {
             si._labelInfo.Content = $"Информация о погоде в {location}";
             si._labelTemp.Content = temp + " °C";
