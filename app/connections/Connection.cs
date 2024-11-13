@@ -16,19 +16,19 @@ namespace WeatherApplication.app.connections
             try
             {
                 // Connect to our API
-                HttpWebRequest request =(HttpWebRequest)WebRequest
-                    .Create($"http://api.openweathermap.org/data/2.5/weather?q={location}&lang={lang}&units=metric&appid={key}");
+                WebRequest request =
+                    WebRequest.Create($"http://api.openweathermap.org/data/2.5/weather?q={location}&lang={lang}&units=metric&appid={key}");
                 //Take response from OpenWeatherAPI
                 request.Method = "POST";
                 //Convert request to response
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                WebResponse response = await request.GetResponseAsync();
                 string answer = string.Empty;
                 //Reading response
                 using (Stream s = response.GetResponseStream())
                 {
                     using (StreamReader sr = new StreamReader(s))
                     {
-                        answer = sr.ReadToEnd();
+                        answer = await sr.ReadToEndAsync();
                     }
                 }
                 //Closed response
