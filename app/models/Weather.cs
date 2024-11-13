@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WeatherApplication.app.models
 {
     //Запрос weather[].description - дает нам возможность получить данные об описании погоды
-    internal class Description
+    internal class Weather
     {
         public string description;
     }

@@ -26,7 +26,7 @@ namespace WeatherApplication
         private readonly ShowInfo showInfo;
         private string key = "";//PUT_YOUR_TOKEN_HERE
         private string location;
-        private static string answer;
+        private string lang = "ru";//Change if you need another language. For example : English - en
 
         public WeatherClient()
         {
@@ -58,13 +58,12 @@ namespace WeatherApplication
 
             try
             {
-                Connection.ConnectAsync(location, key, showInfo).Wait();
+                Connection.ConnectAsync(location, key, showInfo, lang).Wait();
             }
             catch (Exception ex)//Add more exceptions
             {
                 error.AppendLine(Convert.ToString(ex));
             }
         }
-
     }
 }

@@ -24,11 +24,11 @@ namespace WeatherApplication.app.views
             _labelWindSpeed = labelWindSpeed;
         }
 
-        public static void UpdateInfo(ShowInfo si,string location, float temp, string description, float speed)
+        public static void UpdateInfo(ShowInfo si,string location, float temp, string weather, float speed)
         {
             si._labelInfo.Content = $"Информация о погоде в {location}";
             si._labelTemp.Content = temp + " °C";
-            si._labelDescription.Content = description;
+            si._labelDescription.Content = weather;
             si._labelWindSpeed.Content = speed + " м/с";
         }
     }

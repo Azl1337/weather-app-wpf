@@ -71,7 +71,7 @@
     </Compile>
     <Compile Include="app\connections\Connection.cs" />
     <Compile Include="app\diraction\IShowInfo.cs" />
-    <Compile Include="app\models\Description.cs" />
+    <Compile Include="app\models\Weather.cs" />
     <Compile Include="app\models\Temperature.cs" />
     <Compile Include="app\models\WeatherResponse.cs" />
     <Compile Include="app\models\Wind.cs" />

@@ -11,13 +11,13 @@ namespace WeatherApplication.app.connections
 {
     public class Connection
     {
-        public static async Task ConnectAsync(string location, string key, ShowInfo si)
+        public static async Task ConnectAsync(string location, string key, ShowInfo si, string lang)
         {
             try
             {
                 // Connect to our API
-                HttpWebRequest request =
-                    (HttpWebRequest)WebRequest.Create($"https://api.openweathermap.org/data/2.5/weather?q={location}&units=metric&appid={key}");
+                HttpWebRequest request =(HttpWebRequest)WebRequest
+                    .Create($"http://api.openweathermap.org/data/2.5/weather?q={location}&lang={lang}&units=metric&appid={key}");
                 //Take response from OpenWeatherAPI
                 request.Method = "POST";
                 //Convert request to response

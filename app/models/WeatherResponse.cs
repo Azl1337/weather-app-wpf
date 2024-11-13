@@ -10,7 +10,7 @@ namespace WeatherApplication.app.models
     internal class WeatherResponse
     {
         public Temperature main;
-        public Description[] weather;
+        public Weather[] weather;
         public Wind wind;
     }
 }
