@@ -26,9 +26,6 @@ namespace WeatherApplication
         {
             StringBuilder error = new StringBuilder();
 
-            //if (string.IsNullOrWhiteSpace(TBoxAppKey.Text))
-            //    error.AppendLine("Ключ введен некорректно");
-
             if (string.IsNullOrWhiteSpace(TBoxLocation.Text))
                 error.AppendLine("Город введен некорректно");
 
@@ -38,7 +35,6 @@ namespace WeatherApplication
                 return;
             }
             
-            //key = TBoxAppKey.Text;
             location = TBoxLocation.Text;
 
             try
