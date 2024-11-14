@@ -17,7 +17,7 @@ namespace WeatherApplication.app.connections
             {
                 // Connect to our API
                 WebRequest request =
-                    WebRequest.Create($"http://api.openweathermap.org/data/2.5/weather?q={location}&lang={lang}&units=metric&appid={key}");
+                    WebRequest.Create($"https://api.openweathermap.org/data/2.5/weather?q={location}&lang={lang}&units=metric&appid={key}");
                 //Take response from OpenWeatherAPI
                 request.Method = "POST";
                 //Convert request to response
@@ -37,12 +37,13 @@ namespace WeatherApplication.app.connections
                 //Используем метод DeserializeObject для того, чтобы не сохранять состояние объекта для последующего воссоздания
                 WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
 
-                ShowInfo.UpdateInfo(
+                si.UpdateInfo(
                     si,
                     location,
                     weatherResponse.main.temp,
                     weatherResponse.weather[0].description,
-                    weatherResponse.wind.speed
+                    weatherResponse.wind.speed,
+                    weatherResponse.weather[0].icon
                     );
             }
             catch(Exception ex)

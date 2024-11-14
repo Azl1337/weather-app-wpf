@@ -19,7 +19,8 @@ namespace WeatherApplication
             showInfo = new ShowInfo(labelInfo,
                 labelTemp, 
                 labelDescription, 
-                labelWindSpeed);
+                labelWindSpeed,
+                imageWeaterIcon);
         }
 
         private void BSearchClick(object sender, RoutedEventArgs e)
@@ -45,6 +46,11 @@ namespace WeatherApplication
             {
                 error.AppendLine(Convert.ToString(ex));
             }
+        }
+
+        private void BExitClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
